@@ -1,0 +1,14 @@
+{
+  "name": "@rbxts/color",
+  "version": "0.1.0",
+  "description": "",
+  "main": "out/init.lua",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": false,
+  "devDependencies": {
+    "@rbxts/types": "^1.0.272"
+  }
+}
