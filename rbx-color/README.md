@@ -1,3 +1,3 @@
-color
+Color
 =============
 Library for manipulating colors
