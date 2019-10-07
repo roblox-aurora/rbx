@@ -1,1 +1,1 @@
-export { Platform, PlatformType } from "./Platform";
+export { Device, DeviceType } from "./Device";

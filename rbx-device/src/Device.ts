@@ -2,7 +2,7 @@ const Workspace = game.GetService("Workspace");
 const UserInputService = game.GetService("UserInputService");
 const GuiService = game.GetService("GuiService");
 
-export const enum PlatformType {
+export const enum DeviceType {
 	Desktop = "desktop",
 	Mobile = "mobile",
 	Console = "console",
@@ -10,11 +10,7 @@ export const enum PlatformType {
 	Unknown = "unknown"
 }
 
-export namespace Platform {
-	function getViewportSize() {
-		return Workspace.CurrentCamera!.ViewportSize;
-	}
-
+export namespace Device {
 	function gcd(a: number, b: number): number {
 		if (b === 0) {
 			return a;
@@ -24,11 +20,31 @@ export namespace Platform {
 	}
 
 	/**
+	 * Gets the viewport size
+	 */
+	export function GetViewportSize() {
+		if (typeIs(Workspace.CurrentCamera, "Instance")) {
+			return Workspace.CurrentCamera.ViewportSize;
+		} else {
+			return new Vector2();
+		}
+	}
+
+	/**
+	 * Gets the viewport size, subtracting the inset
+	 */
+	export function GetViewportSizeWithInset() {
+		const [topLeft, bottomRight] = GuiService.GetGuiInset();
+		const vpSize = GetViewportSize();
+		return vpSize.sub(topLeft).sub(bottomRight);
+	}
+
+	/**
 	 * Gets the aspect ratio of this device
 	 * @rbxts client
 	 */
 	export function GetAspectRatio(): [number, number] {
-		const vpSize = getViewportSize();
+		const vpSize = GetViewportSize();
 		const result = gcd(vpSize.X, vpSize.Y);
 		return [vpSize.X / result, vpSize.Y / result];
 	}
@@ -44,21 +60,20 @@ export namespace Platform {
 		const hasGamepad = UserInputService.GamepadEnabled;
 		const hasTouch = UserInputService.TouchEnabled;
 		const hasKeyboard = UserInputService.KeyboardEnabled;
-		// const mouseEnabled = UserInputService.MouseEnabled;
 
 		if (hasGamepad && GuiService.IsTenFootInterface()) {
-			return PlatformType.Console;
+			return DeviceType.Console;
 		} else if (hasTouch && !hasKeyboard) {
-			const size = getViewportSize();
+			const size = GetViewportSize();
 			if (size.X >= 1023 && size.Y >= 767) {
-				return PlatformType.Tablet;
+				return DeviceType.Tablet;
 			} else {
-				return PlatformType.Mobile;
+				return DeviceType.Mobile;
 			}
 		} else if (hasKeyboard) {
-			return PlatformType.Desktop;
+			return DeviceType.Desktop;
 		} else {
-			return PlatformType.Unknown;
+			return DeviceType.Unknown;
 		}
 	}
 }

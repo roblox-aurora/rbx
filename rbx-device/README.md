@@ -1,8 +1,8 @@
-# Platform
+# Device
 
-A utility to get what platform a user is on.
+A utility to get device information.
 
-Useful for knowing what controls to assign to a user, or a custom experience/UI per platform.
+Useful for knowing what controls to assign to a user, or a custom experience/UI per platform/device.
 
 ## GetPlatformType()
 
