@@ -1,6 +1,6 @@
 {
-  "name": "@rbxts/platform",
-  "version": "0.0.2",
+  "name": "@rbxts/async",
+  "version": "1.0.0",
   "description": "",
   "main": "out/init.lua",
   "scripts": {
@@ -12,6 +12,6 @@
   "private": false,
   "types": "out/index.d.ts",
   "devDependencies": {
-    "@rbxts/types": "^1.0.277"
+    "@rbxts/types": "^1.0.276"
   }
 }

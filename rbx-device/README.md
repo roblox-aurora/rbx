@@ -12,3 +12,9 @@ Returns the platform type
 - `desktop` - Is Windows or MacOS 
 - `tablet` - Is iOS or Android tablet 
 - `phone` Is iOS or Android phone
+
+
+## GetAspectRatio
+Gets the aspect ratio of the screen
+
+Returns an array of two numbers, e.g. a 1920x1080 screen will give you `[16, 9]`
