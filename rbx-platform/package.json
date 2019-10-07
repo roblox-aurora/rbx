@@ -1,0 +1,17 @@
+{
+  "name": "@rbxts/platform",
+  "version": "0.0.1",
+  "description": "",
+  "main": "out/init.lua",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": false,
+  "types": "out/index.d.ts",
+  "devDependencies": {
+    "@rbxts/types": "^1.0.277"
+  }
+}
