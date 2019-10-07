@@ -1,4 +1,4 @@
-rbx-libs
+Roblox TypeScript libraries
 ===========
 A collection of typescript Roblox libraries written by the Vorlias & Aurora Australis team.
 
