@@ -1,0 +1,19 @@
+{
+	"name": "@rbxts/device",
+	"version": "0.1.1",
+	"description": "Platform/Device helper functions for Roblox",
+	"main": "out/init.lua",
+	"scripts": {},
+	"keywords": [
+		"ROBLOX",
+		"Device",
+		"Platform"
+	],
+	"author": "",
+	"license": "MIT",
+	"private": false,
+	"types": "out/index.d.ts",
+	"devDependencies": {
+		"@rbxts/types": "^1.0.277"
+	}
+}
