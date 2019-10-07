@@ -6,9 +6,9 @@ A collection of typescript Roblox libraries written by the Vorlias & Aurora Aust
 ============
 A library for manipulation of attachments and accessories
 
-[Platform](https://github.com/roblox-aurora/rbx-libs/tree/master/rbx-platform)
+[Device](https://github.com/roblox-aurora/rbx-libs/tree/master/rbx-device)
 ===============
-A library for platform information
+A library for Device information
 
 [Color](https://github.com/roblox-aurora/rbx-libs/tree/master/rbx-color)
 =================
