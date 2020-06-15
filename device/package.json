@@ -1,6 +1,6 @@
 {
 	"name": "@rbxts/device",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Platform/Device helper functions for Roblox",
 	"main": "out/init.lua",
 	"scripts": {},
