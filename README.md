@@ -13,3 +13,7 @@ A library for Device information
 [Color](https://github.com/roblox-aurora/rbx/tree/master/color)
 =================
 Color manipulation library
+
+[InputActions](https://github.com/roblox-aurora/rbx/tree/master/input)
+=================
+Input library
