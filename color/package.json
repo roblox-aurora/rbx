@@ -1,8 +1,9 @@
 {
 	"name": "@rbxts/color",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "",
 	"main": "out/init.lua",
+	"types": "out/index.d.ts",
 	"scripts": {},
 	"keywords": [
 		"ROBLOX",
